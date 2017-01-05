@@ -21,6 +21,12 @@ header {
   header ul > li {
     list-style: none; }
 
+.strikethrough {
+  text-decoration: line-through; }
+
+.italic {
+  font-style: italic; }
+
 #splash {
   width: 100vw;
   height: 100vh;
@@ -52,18 +58,18 @@ header {
     width: 100%;
     height: 100%; }
 
-#about, #connections {
+#about, #connections, #placeholder {
   background-color: #000;
   color: #fff; }
 
-#about, #eat, #consume, #work, #impact {
+#about, #eat, #consume, #work, #impact, #action, #placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 80vh;
   text-align: center; }
-  #about h2, #about p, #eat h2, #eat p, #consume h2, #consume p, #work h2, #work p, #impact h2, #impact p {
+  #about h2, #about p, #eat h2, #eat p, #consume h2, #consume p, #work h2, #work p, #impact h2, #impact p, #action h2, #action p, #placeholder h2, #placeholder p {
     width: 80%;
     max-width: 800px;
     line-height: 1.8em; }
