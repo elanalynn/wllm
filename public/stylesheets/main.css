@@ -1,0 +1,80 @@
+body, article, section, main {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: Farray;
+  src: url(../fonts/farray.regular.otf); }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif; }
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px; }
+  header ul > li {
+    list-style: none; }
+
+#splash {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#title {
+  font-family: 'Farray', sans-serif;
+  background-color: #000;
+  color: #FFF;
+  padding: 10px;
+  text-align: center; }
+
+#pillars {
+  display: flex;
+  justify-content: center; }
+
+.pillars {
+  width: 80%;
+  margin: 50px auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-around; }
+
+.pillar {
+  max-width: 200px; }
+  .pillar img {
+    width: 100%;
+    height: 100%; }
+
+#about, #connections {
+  background-color: #000;
+  color: #fff; }
+
+#about, #eat, #consume, #work, #impact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center; }
+  #about h2, #about p, #eat h2, #eat p, #consume h2, #consume p, #work h2, #work p, #impact h2, #impact p {
+    width: 80%;
+    max-width: 800px;
+    line-height: 1.8em; }
+
+#connections {
+  background-color: #000;
+  padding: 10px;
+  text-align: center; }
+  #connections a {
+    color: #fff; }
+
+footer {
+  padding: 10px;
+  text-align: center; }

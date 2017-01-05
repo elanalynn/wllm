@@ -1,10 +1,21 @@
 {
-  "name": "wllm-server",
+  "name": "wllm",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "mocha test -u bdd -R spec",
+    "pretest": "npm run lint",
+    "posttest": "echo 'the test has been run!'",
+    "lint": "jshint *.js",
+    "precompile": "npm run clean",
+    "clean": "rimraf lib/*",
+    "compile": "npm run compile:ts",
+    "compile:ts": "tsc --outDir ./lib --module commonjs ./src/typescript/app.ts",
+    "build-css": "node-sass src/sass/main.scss public/stylesheets/main.css"
   },
+  "author": "Elana Kopelevich",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
@@ -12,5 +23,13 @@
     "express": "~4.13.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.1.1",
+    "rimraf": "^2.5.4",
+    "should": "^11.1.2",
+    "typescript": "^2.1.4"
   }
 }
