@@ -9,6 +9,9 @@ a {
   font-family: Farray;
   src: url(../fonts/farray.regular.otf); }
 
+#wrapper {
+  background: linear-gradient(to bottom, #FFF 0%, #ddedfe 100%); }
+
 body {
   width: 100vw;
   height: 100vh;
