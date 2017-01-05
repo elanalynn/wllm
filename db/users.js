@@ -1,9 +1,11 @@
-const knex = require('./knex')
+const bookshelf = require('./bookshelf');
+
+const User = bookshelf.Model.extend({ tableName: 'users' });
 
 module.exports = {
-  createUser: user => knex('users').then(user => user),
-  readUser: id => knex('users').where('id', id).then(user => user),
-  updateUser: user => knex('users').where('id', user.id).then(user => user),
-  deleteUser: id => knex('users').then(user => user),
-  listUsers: () => knex('users').then(users => users)
+  // createUser: user =>
+  readUser: id => new User({ 'id': id }).fetch().then(data => data.attributes),
+  // updateUser: user =>
+  // deleteUser: id =>
+  listUsers: () => User.fetchAll().then(data => data.models)
 }
