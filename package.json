@@ -12,7 +12,8 @@
     "clean": "rimraf lib/*",
     "compile": "npm run compile:ts",
     "compile:ts": "tsc --outDir ./lib --module commonjs ./src/typescript/app.ts",
-    "build-css": "node-sass src/sass/main.scss public/stylesheets/main.css"
+    "build-css": "node-sass src/sass/main.scss public/stylesheets/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "Elana Kopelevich",
   "license": "ISC",
